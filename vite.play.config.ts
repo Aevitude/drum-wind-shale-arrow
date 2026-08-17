@@ -4,7 +4,7 @@ import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/drum-wind-shale-arrow/",
+  base: "./",
   root: path.resolve("play"),
   publicDir: path.resolve("public"),
   plugins: [tailwindcss(), viteReact()],
