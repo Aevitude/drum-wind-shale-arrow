@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--skin-bg, #071412);
+  --color-surface: var(--skin-surface, #0e221c);
+  --color-fg: var(--skin-fg, #e8f0e4);
+  --color-muted: var(--skin-muted, #7d968c);
+  --color-primary: var(--skin-accent, #d4b56a);
+  --color-border: color-mix(in oklab, var(--skin-fg, #e8f0e4) 14%, transparent);
+  --font-display: "Noto Serif SC", "Songti SC", serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Source Han Sans SC", sans-serif;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--skin-bg, #071412);
+    color: var(--skin-fg, #e8f0e4);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--skin-bg, #071412);
+    color: var(--skin-fg, #e8f0e4);
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+}
+
+.silk-root {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  color: var(--skin-fg);
+  background: var(--skin-bg);
+  touch-action: none;
+  user-select: none;
+}
+
+.silk-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+  transform: scale(1.04);
+}
+
+.silk-wash {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklab, var(--skin-bg) 38%, transparent);
+}
+
+.silk-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.silk-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  padding: max(16px, env(safe-area-inset-top)) 20px 0;
+  pointer-events: none;
+}
+
+.silk-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.silk-stat-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.silk-k {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--skin-muted);
+}
+
+.silk-v {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--skin-fg);
+}
+
+.silk-brand {
+  text-align: center;
+  padding-top: 4px;
+}
+
+.silk-en {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--skin-muted);
+}
+
+.silk-food {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--skin-accent);
+}
+
+.silk-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 24px 160px;
+  text-align: center;
+  background: color-mix(in oklab, var(--skin-bg) 28%, transparent);
+  pointer-events: none;
+}
+
+.silk-eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  color: var(--skin-muted);
+}
+
+.silk-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 14vw, 92px);
+  letter-spacing: 0.18em;
+  line-height: 1.05;
+}
+
+.silk-sub {
+  margin: 14px 0 0;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--skin-muted);
+}
+
+.silk-cta {
+  pointer-events: auto;
+  margin-top: 28px;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--skin-fg);
+  color: var(--skin-bg);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+  transition:
+    transform 150ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 150ms ease;
+}
+
+.silk-cta:hover {
+  opacity: 0.92;
+}
+
+.silk-cta:active {
+  transform: scale(0.98);
+}
+
+.silk-hint {
+  margin: 16px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--skin-muted);
+}
+
+.silk-pad {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.silk-pad-mid {
+  display: flex;
+  gap: 6px;
+}
+
+.silk-dir {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  min-width: 48px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid color-mix(in oklab, var(--skin-fg) 14%, transparent);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--skin-surface) 48%, transparent);
+  color: var(--skin-fg);
+}
+
+.silk-dir:active {
+  background: color-mix(in oklab, var(--skin-accent) 28%, transparent);
+}
+
+@media (min-width: 900px) {
+  .silk-pad {
+    opacity: 0.35;
+  }
+  .silk-pad:hover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .silk-cta {
+    transition: none;
+  }
+}
