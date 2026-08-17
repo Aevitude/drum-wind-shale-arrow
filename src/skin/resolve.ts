@@ -2,6 +2,7 @@ import { STYLE as RAW_STYLE, SEED as RAW_SEED } from "./choice";
 import { CATALOG } from "./catalog";
 import { hashSeed, shiftHex } from "./color";
 import { STYLE_IDS, type ResolvedSkin, type StyleId } from "./types";
+import { withBase } from "./base";
 
 const ALIASES: Record<string, StyleId> = {
   夜园玉蛇: "night-jade",
@@ -60,7 +61,7 @@ export function resolveSkin(styleRaw: unknown, seedRaw: unknown): ResolvedSkin {
     snake: family.snake,
     food: family.food,
     decor: family.decor,
-    bgImage: family.bgImage,
+    bgImage: withBase(family.bgImage),
     palette: {
       bg: shift(family.palette.bg, 0),
       surface: shift(family.palette.surface, 0),
