@@ -31,7 +31,7 @@
     font-family: var(--font-sans);
     background: var(--skin-bg, #071412);
     color: var(--skin-fg, #e8f0e4);
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   h1,
@@ -253,3 +253,223 @@
     transition: none;
   }
 }
+
+.atelier {
+  position: relative;
+  min-height: 100dvh;
+  color: var(--skin-fg);
+  background: var(--skin-bg);
+}
+
+.atelier-photo {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.04);
+  transform: scale(1.03);
+  z-index: 0;
+}
+
+.atelier-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--skin-bg) 18%, transparent) 0%,
+      color-mix(in oklab, var(--skin-bg) 42%, transparent) 42%,
+      var(--skin-bg) 78%
+    );
+}
+
+.atelier-nav,
+.atelier-hero,
+.atelier-panel,
+.atelier-foot {
+  position: relative;
+  z-index: 2;
+}
+
+.atelier-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: max(20px, env(safe-area-inset-top)) 22px 0;
+}
+
+.atelier-mark {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.18em;
+}
+
+.atelier-trade {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--skin-muted);
+}
+
+.atelier-hero {
+  padding: 22vh 22px 72px;
+  max-width: 720px;
+}
+
+.atelier-kicker {
+  margin: 0 0 16px;
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  color: var(--skin-muted);
+}
+
+.atelier-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(56px, 16vw, 120px);
+  letter-spacing: 0.12em;
+  line-height: 0.95;
+}
+
+.atelier-line {
+  margin: 20px 0 0;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: var(--skin-accent);
+}
+
+.atelier-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--skin-fg);
+  color: var(--skin-bg);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition:
+    transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 160ms ease;
+}
+
+.atelier-cta:hover {
+  opacity: 0.9;
+}
+
+.atelier-cta:active {
+  transform: scale(0.98);
+}
+
+.atelier-cta-ghost {
+  background: transparent;
+  color: var(--skin-fg);
+  border: 1px solid color-mix(in oklab, var(--skin-fg) 28%, transparent);
+}
+
+.atelier-panel {
+  padding: 56px 22px;
+  max-width: 720px;
+}
+
+.atelier-label {
+  margin: 0 0 20px;
+  font-size: 11px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--skin-muted);
+}
+
+.atelier-copy {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+}
+
+.atelier-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+}
+
+.atelier-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.atelier-no {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--skin-accent);
+  padding-top: 4px;
+}
+
+.atelier-item h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.atelier-item p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--skin-muted);
+}
+
+.atelier-hours,
+.atelier-place {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+}
+
+.atelier-place {
+  margin-top: 6px;
+  color: var(--skin-muted);
+}
+
+.atelier-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 22px max(28px, env(safe-area-inset-bottom));
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--skin-muted);
+}
+
+@media (min-width: 900px) {
+  .atelier-hero,
+  .atelier-panel,
+  .atelier-nav,
+  .atelier-foot {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
+  .atelier-hero {
+    padding-top: 26vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atelier-cta {
+    transition: none;
+  }
+}
+

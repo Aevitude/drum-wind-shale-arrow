@@ -1,20 +1,20 @@
-# 丝滑贪食蛇
+# 品牌一页
 
-给豆包用的高级贪食蛇。玩法锁死，气质由链接里的两个参数决定。
+给豆包用的高级一页官网。行业气质锁在十套里，店名写在链接上。
 
 ## 玩家对豆包说这一段
 
 ```
-用这个仓库的 skill 给我做一款贪食蛇：
+用这个仓库的 skill 给我做一页品牌官网：
 https://github.com/Aevitude/drum-wind-shale-arrow
 先读 SKILL.md，按里面的流程来。
-做完直接给我能点开的游戏链接，不要在我电脑上开服务器。
+做完直接给我能点开的链接，不要在我电脑上开服务器。
 ```
 
-豆包列出 10 种气质。你选一个，它发回一个链接，点开就能玩。
+豆包列出 10 类客户。选一个，它发回链接，点开就是一页官网。
 
-游戏地址：
+示例：
 
-https://aevitude.github.io/?style=night-jade&seed=demo
+https://aevitude.github.io/?style=night-jade&name=青瓦
 
 详见 [SKILL.md](./SKILL.md)。

@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "夜园";
+const APP_NAME = "一页";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : undefined;
 

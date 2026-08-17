@@ -23,8 +23,8 @@ function Login() {
         ) : (
           <p className="text-sm text-muted">登录未开启。</p>
         )}
-        <Link to="/" search={{ style: undefined, seed: undefined }} className="block text-center text-sm tracking-[0.16em] text-muted">
-          返回庭院
+        <Link to="/" search={{ style: undefined, seed: undefined, name: undefined }} className="block text-center text-sm tracking-[0.16em] text-muted">
+          返回
         </Link>
       </div>
     </main>
