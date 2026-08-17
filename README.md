@@ -15,6 +15,6 @@ https://github.com/Aevitude/drum-wind-shale-arrow
 
 游戏地址：
 
-https://cdn.jsdelivr.net/gh/Aevitude/drum-wind-shale-arrow@main/docs/index.html?style=night-jade&seed=demo
+https://aevitude.github.io/?style=night-jade&seed=demo
 
 详见 [SKILL.md](./SKILL.md)。

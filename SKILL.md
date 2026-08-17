@@ -11,7 +11,7 @@ description: 用线上已做好的高级贪食蛇，按玩家选的气质生成�
 
 线上地址（不许改）：
 
-`https://cdn.jsdelivr.net/gh/Aevitude/drum-wind-shale-arrow@main/docs/`
+`https://aevitude.github.io/`
 
 ## 1. 问风格
 
@@ -38,7 +38,7 @@ description: 用线上已做好的高级贪食蛇，按玩家选的气质生成�
 
 游戏链接：
 
-`https://cdn.jsdelivr.net/gh/Aevitude/drum-wind-shale-arrow@main/docs/index.html?style=STYLE&seed=SEED`
+`https://aevitude.github.io/?style=STYLE&seed=SEED`
 
 | 玩家选的 | STYLE |
 |---|---|
@@ -61,7 +61,7 @@ description: 用线上已做好的高级贪食蛇，按玩家选的气质生成�
 
 > 你的【气质名】贪食蛇做好了。
 >
-> 👉 https://cdn.jsdelivr.net/gh/Aevitude/drum-wind-shale-arrow@main/docs/index.html?style=aurora-snow&seed=8472
+> 👉 https://aevitude.github.io/?style=aurora-snow&seed=8472
 >
 > 点开就能玩，再点中间按钮开始。
 
